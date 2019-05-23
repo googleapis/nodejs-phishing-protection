@@ -1,5 +1,5 @@
 {
-  "repository": "googleapis/phishing-protection",
+  "repository": "googleapis/nodejs-phishing-protection",
   "name": "@google-cloud/phishing-protection",
   "version": "0.1.0",
   "author": "Google LLC",
