@@ -23,7 +23,7 @@ const execSync = cmd => cp.execSync(cmd, {encoding: 'utf-8'});
 
 const cwd = path.join(__dirname, '..');
 
-const PROJECT_ID = '12345';
+const PROJECT_ID = '1046198160504';
 const URI = 'http://testsafebrowsing.appspot.com/s/phishing.html';
 
 describe('Quickstart', () => {
