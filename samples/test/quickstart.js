@@ -28,7 +28,10 @@ const URI = 'http://testsafebrowsing.appspot.com/s/phishing.html';
 
 describe('Quickstart', () => {
   it('should run quickstart', async () => {
-    const stdout = execSync(`node ./samples/quickstart.js ${URI} ${PROJECT_ID}`, {cwd});
+    const stdout = execSync(
+      `node ./samples/quickstart.js ${URI} ${PROJECT_ID}`,
+      {cwd}
+    );
     assert.include(stdout, 'reported');
   });
 });
