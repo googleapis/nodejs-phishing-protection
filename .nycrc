@@ -9,7 +9,6 @@
     "**/docs",
     "**/samples",
     "**/scripts",
-    "**/src/**/v*/**/*.js",
     "**/test",
     ".jsdoc.js",
     "**/.jsdoc.js",
