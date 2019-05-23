@@ -40,6 +40,6 @@ fi
 GITHUB_TOKEN=$(cat $KOKORO_KEYSTORE_DIR/73713_yoshi-automation-github-key) || true
 if [ "$GITHUB_TOKEN" ]; then
   npx release-please release-pr --token=$GITHUB_TOKEN \
-    --repo-url=googleapis/phishing-protection \
+    --repo-url=googleapis/nodejs-phishing-protection \
     --package-name=@google-cloud/phishing-protection
 fi
