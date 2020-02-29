@@ -21,7 +21,9 @@ export NPM_CONFIG_PREFIX=/home/node/.npm-global
 cd $(dirname $0)/..
 
 npm install
-npm test
+npm test -- --reporter=xunit --reporter-option='output=sponge_log.xml'
+chmod +x $KOKORO_GFILE_DIR/linux_amd64/buildcop
+$KOKORO_GFILE_DIR/linux_amd64/buildcop
 
 # codecov combines coverage across integration and unit tests. Include
 # the logic below for any environment you wish to collect coverage for:
