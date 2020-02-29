@@ -33,14 +33,9 @@ fi
 
 if [ -f samples/package.json ]; then
     npm install
-
-    # Install and link samples
-    cd samples/
-    npm link ../
-    npm install
-    cd ..
-
-    npm run samples-test
+    npm test -- --reporter=xunit --reporter-option='output=sponge_log.xml'
+    chmod +x $KOKORO_GFILE_DIR/linux_amd64/buildcop
+    $KOKORO_GFILE_DIR/linux_amd64/buildcop
 fi
 
 # codecov combines coverage across integration and unit tests. Include
