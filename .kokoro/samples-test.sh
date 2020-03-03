@@ -33,9 +33,9 @@ fi
 
 if [ -f samples/package.json ]; then
     npm install
-    npm test -- --reporter=xunit --reporter-option='output=sponge_log.xml'
+    npm test -- --reporter=xunit --reporter-option='output=test_output_sponge_log.xml'
     chmod +x $KOKORO_GFILE_DIR/linux_amd64/buildcop
-    $KOKORO_GFILE_DIR/linux_amd64/buildcop
+    $KOKORO_GFILE_DIR/linux_amd64/buildcop --repo $(cat package.json | npx --quiet json@9.0.6 repository)
 fi
 
 # codecov combines coverage across integration and unit tests. Include
