@@ -137,7 +137,6 @@ describe('v1beta1.PhishingProtectionServiceV1Beta1Client', () => {
         assert(err instanceof FakeError);
         assert.strictEqual(err.code, FAKE_STATUS_CODE);
         assert(typeof response === 'undefined');
-        assert(false);
         done();
       });
     });
