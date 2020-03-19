@@ -55,21 +55,21 @@ npm install @google-cloud/phishing-protection
 ### Using the client library
 
 ```javascript
-  const {
-    PhishingProtectionServiceV1Beta1Client,
-  } = require('@google-cloud/phishing-protection');
-  const client = new PhishingProtectionServiceV1Beta1Client();
+const {
+  PhishingProtectionServiceV1Beta1Client,
+} = require('@google-cloud/phishing-protection');
+const client = new PhishingProtectionServiceV1Beta1Client();
 
-  // the numeric project ID.
-  const formattedParent = client.projectPath(projectId);
-  const request = {
-    parent: formattedParent,
-    uri: uri, // the URI to report to Phishing API.
-  };
+// the numeric project ID.
+const formattedParent = client.projectPath(projectId);
+const request = {
+  parent: formattedParent,
+  uri: uri, // the URI to report to Phishing API.
+};
 
-  await client.reportPhishing(request);
+await client.reportPhishing(request);
 
-  console.info(`reported ${uri} to Phishing Protection API`);
+console.info(`reported ${uri} to Phishing Protection API`);
 
 ```
 
@@ -111,11 +111,13 @@ More Information: [Google Cloud Platform Launch Stages][launch_stages]
 
 Contributions welcome! See the [Contributing Guide](https://github.com/googleapis/nodejs-phishing-protection/blob/master/CONTRIBUTING.md).
 
-Please note that this `README.md`, the `samples/README.md`,
+Please note that this [README.md](README.md), the [samples/README.md](samples/README.md),
 and a variety of configuration files in this repository (including `.nycrc` and `tsconfig.json`)
-are generated from a central template. To edit one of these files, make an edit
-to its template in this
-[directory](https://github.com/googleapis/synthtool/tree/master/synthtool/gcp/templates/node_library).
+are generated from a central template.
+
+If you would like to make edits to one of those files
+(or if you aren't certain if the file you're changing is one, check in the template repository before making changes),
+look for the file in the [template](https://github.com/googleapis/synthtool/tree/master/synthtool/gcp/templates/node_library).
 
 ## License
 
