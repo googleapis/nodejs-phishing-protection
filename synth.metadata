@@ -1,12 +1,13 @@
 {
-  "updateTime": "2020-04-08T12:18:06.391566Z",
+  "updateTime": "2020-04-08T12:19:39.527804Z",
   "sources": [
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "3d5d228a58bdf875e6147b228db3159010c735ee",
-        "internalRef": "304500143"
+        "sha": "62a2a7cc33d3535638d220df238823eefcca930d",
+        "internalRef": "304696461",
+        "log": "62a2a7cc33d3535638d220df238823eefcca930d\nchore: set Ruby namespace in proto options\n\nPiperOrigin-RevId: 304696461\n\n23848c8f64a5e81a239d6133378468185f1756dc\nchore: set Ruby namespace in proto options\n\nPiperOrigin-RevId: 304696192\n\n9514fa9e390a4c0715972c5b510cf4c10ad049a1\ndocs: change relative URLs to absolute URLs to fix broken links.\n\nPiperOrigin-RevId: 304695334\n\n0f7b1509a9a452808c3d07fe90fedfcea763d7d5\nfix: change config_schema_version to 2.0.0 for containeranalysis v1 gapic config.\n\ncommitter: @hzyi-google\nPiperOrigin-RevId: 304672648\n\n3d52f3c126fbfc31f067a7f54737b7f0dfbce163\nDialogflow weekly v2 library update:\n- Change `parent` field's resource_reference to specify child_type instead of type per client library generation requirement;\n- Change Session with its child resource pattern to support both projects/{project}/agent/sessions/{session} and projects/{project}/agent/environments/{environment}/users/{user}/sessions/{session};\n- Fix `method_signature`\n- Regular documentation update\n\nImportant updates are also posted at:\nhttps://cloud.google.com/dialogflow/docs/release-notes\n\nPiperOrigin-RevId: 304635286\n\n4a6a01ce0ead505c245d11a2ce156de34800c58f\ndocs: change a relative URL to an absolute URL to fix broken links.\n\nPiperOrigin-RevId: 304633630\n\n1b969c28a6579265e89cd35e6c2ecacc89970e2d\nchore: set Ruby namespace in proto options\n\nPiperOrigin-RevId: 304620317\n\n5378173a889f9c7d83e36e52d38a6267190de692\nAdd v1beta2 SubmitJobAsOperation RPC to Dataproc.\n\nPiperOrigin-RevId: 304594381\n\n"
       }
     },
     {
