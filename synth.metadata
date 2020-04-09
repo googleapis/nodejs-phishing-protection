@@ -1,6 +1,13 @@
 {
-  "updateTime": "2020-04-03T12:00:02.120019Z",
+  "updateTime": "2020-04-09T12:32:04.081672Z",
   "sources": [
+    {
+      "git": {
+        "name": ".",
+        "remote": "https://github.com/googleapis/nodejs-phishing-protection.git",
+        "sha": "e71e49252a8e67a03c55af2919a12a34ee121726"
+      }
+    },
     {
       "git": {
         "name": "googleapis",
