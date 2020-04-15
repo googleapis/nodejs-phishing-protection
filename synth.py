@@ -30,7 +30,7 @@ for version in versions:
     'phishingprotection', version,
     generator_args={
       "grpc-service-config": f"google/cloud/phishingprotection/{version}/phishingprotection_grpc_service_config.json",
-      "package-name": f"@google-cloud/phishing-protection",
+      "package-name": "@google-cloud/phishing-protection",
       },
       proto_path=f'/google/cloud/phishingprotection/{version}',
       extra_proto_files=['google/cloud/common_resources.proto'],
