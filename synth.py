@@ -40,7 +40,7 @@ for version in versions:
 # Copy common templates
 common_templates = gcp.CommonTemplates()
 templates = common_templates.node_library(source_location='build/src')
-s.copy(templates, excludes=['.nycrc'])
+s.copy(templates)
 
 # Node.js specific cleanup
 subprocess.run(['npm', 'install'])
