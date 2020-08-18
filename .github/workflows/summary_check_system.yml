@@ -1,0 +1,21 @@
+name: summary check system test
+# This workflow is triggered on check runs
+on: 
+  status
+
+jobs:
+  summary_check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: summary_check_system
+        uses: sofisl/checkRunAction@v10
+        with:
+          conclusion: ${{ github.event.status.state }}
+          pull_request_head_sha: ${{ github.event.status.sha }}
+          author: ${{ github.actor }}
+          myToken: ${{ secrets.GITHUB_TOKEN }}
+          owner: ${{ github.repository_owner }}
+          repo: ${{ github.repository }}
+          testName: ${{ github.event.status.context }}
+          testNameToCheckAgainst: 'ci/kokoro: System test'
+          testAuthorToCheckAgainst: 'release-please[bot]' 

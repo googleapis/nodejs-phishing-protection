@@ -1,4 +1,4 @@
-name: summary check
+name: summary check samples test
 # This workflow is triggered on check runs
 on: 
   status
@@ -7,7 +7,7 @@ jobs:
   summary_check:
     runs-on: ubuntu-latest
     steps:
-      - name: summary_check
+      - name: summary_check_samples
         uses: sofisl/checkRunAction@v10
         with:
           conclusion: ${{ github.event.status.state }}
