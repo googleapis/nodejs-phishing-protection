@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: summary_check_samples
-        uses: sofisl/checkRunAction@v11
+        uses: sofisl/check-run-action@v11
         with:
           conclusion: ${{ github.event.status.state }}
           pull_request_head_sha: ${{ github.event.status.sha }}
@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: summary_check_system
-        uses: sofisl/checkRunAction@v11
+        uses: sofisl/check-run-action@v11
         with:
           conclusion: ${{ github.event.status.state }}
           pull_request_head_sha: ${{ github.event.status.sha }}
