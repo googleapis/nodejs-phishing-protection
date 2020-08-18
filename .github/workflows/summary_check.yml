@@ -1,4 +1,4 @@
-name: summary check samples test
+name: summary check
 # This workflow is triggered on check runs
 on: 
   status
