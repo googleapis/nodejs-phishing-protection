@@ -4,6 +4,13 @@
 
 [1]: https://www.npmjs.com/package/@google-cloud/phishing-protection?activeTab=versions
 
+## [2.2.0](https://www.github.com/googleapis/nodejs-phishing-protection/compare/v2.1.1...v2.2.0) (2020-08-19)
+
+
+### Features
+
+* **build:** add github summary check workflow ([#179](https://www.github.com/googleapis/nodejs-phishing-protection/issues/179)) ([529ee95](https://www.github.com/googleapis/nodejs-phishing-protection/commit/529ee95b59af65b8ce4b78ad3dc436e838bee6d5))
+
 ### [2.1.1](https://www.github.com/googleapis/nodejs-phishing-protection/compare/v2.1.0...v2.1.1) (2020-07-06)
 
 
