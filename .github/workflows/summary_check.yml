@@ -8,27 +8,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: summary_check_samples
-        uses: sofisl/check-run-action@v12.0.3
+        uses: sofisl/check-run-action@v12.0.5
         with:
-          conclusion: ${{ github.event.status.state }}
-          pull_request_head_sha: ${{ github.event.status.sha }}
+          conclusion: ${{ github.event.state }}
+          pull_request_head_sha: ${{ github.event.sha }}
           myToken: ${{ secrets.GITHUB_TOKEN }}
           owner: ${{ github.repository_owner }}
           repo: ${{ github.repository }}
-          testName: ${{ github.event.status.context }}
+          testName: ${{ github.event.context }}
           testNameToCheckAgainst: 'ci/kokoro: Samples test'
           testAuthorToCheckAgainst: 'release-please[bot]'
   summary_check_system:
     runs-on: ubuntu-latest
     steps:
       - name: summary_check_system
-        uses: sofisl/check-run-action@v12.0.3
+        uses: sofisl/check-run-action@v12.0.5
         with:
-          conclusion: ${{ github.event.status.state }}
-          pull_request_head_sha: ${{ github.event.status.sha }}
+          conclusion: ${{ github.event.state }}
+          pull_request_head_sha: ${{ github.event.sha }}
           myToken: ${{ secrets.GITHUB_TOKEN }}
           owner: ${{ github.repository_owner }}
           repo: ${{ github.repository }}
-          testName: ${{ github.event.status.context }}
+          testName: ${{ github.event.context }}
           testNameToCheckAgainst: 'ci/kokoro: System test'
           testAuthorToCheckAgainst: 'release-please[bot]'   
