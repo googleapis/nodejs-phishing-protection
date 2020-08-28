@@ -18,4 +18,10 @@ branchProtectionRules:
   requiresCodeOwnerReviews: false
   requiresStrictStatusChecks: true
 permissionRules:
+  - team: yoshi
+    permission: pull
+  - team: yoshi-nodejs
+    permission: push
+  - team: yoshi-admins
+    permission: admin
 
