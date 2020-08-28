@@ -1,3 +1,6 @@
+rebaseMergeAllowed: true
+squashMergeAllowed: true
+mergeCommitAllowed: false
 branchProtectionRules:
 - pattern: master
   isAdminEnforced: true
@@ -11,3 +14,8 @@ branchProtectionRules:
     - 'ci / Summary Check for ci/kokoro: Samples test (pull_request)'
     - 'ci / Summary Check for ci/kokoro: System test (pull_request)'
     - 'cla/google'
+  requiredApprovingReviewCount: 1
+  requiresCodeOwnerReviews: false
+  requiresStrictStatusChecks: true
+permissionRules:
+
