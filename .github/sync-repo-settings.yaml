@@ -11,11 +11,11 @@ branchProtectionRules:
     - 'windows'
     - 'lint'
     - 'docs'
-    - 'Summary Check for ci/kokoro: Samples test'
-    - 'Summary Check for ci/kokoro: System test'
+    - 'i/kokoro: Samples test'
+    - 'i/kokoro: System test'
     - 'cla/google'
   requiredApprovingReviewCount: 1
-  requiresCodeOwnerReviews: false
+  requiresCodeOwnerReviews: true
   requiresStrictStatusChecks: true
 permissionRules:
   - team: yoshi
