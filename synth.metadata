@@ -3,23 +3,16 @@
     {
       "git": {
         "name": ".",
-        "remote": "https://github.com/googleapis/nodejs-phishing-protection.git",
-        "sha": "4222d03da2e64eec6246193f21369e1e9acded8e"
+        "remote": "git@github.com:googleapis/nodejs-phishing-protection.git",
+        "sha": "9d81a7722db3aa8e14c009c6e6420fac2a9a686a"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "94006b3cb8d2fb44703cf535da15608eed6bf7db",
-        "internalRef": "325949033"
-      }
-    },
-    {
-      "git": {
-        "name": "synthtool",
-        "remote": "https://github.com/googleapis/synthtool.git",
-        "sha": "fdd03c161003ab97657cc0218f25c82c89ddf4b6"
+        "sha": "3dbeac0d54125b123c8dfd39c774b37473c36944",
+        "internalRef": "333159182"
       }
     }
   ],
@@ -74,23 +67,26 @@
     ".kokoro/system-test.sh",
     ".kokoro/test.bat",
     ".kokoro/test.sh",
-    ".kokoro/trampoline.sh",
+    ".kokoro/trampoline_v2.sh",
     ".mocharc.js",
     ".nycrc",
     ".prettierignore",
     ".prettierrc.js",
+    ".trampolinerc",
     "CODE_OF_CONDUCT.md",
     "CONTRIBUTING.md",
     "LICENSE",
     "README.md",
     "api-extractor.json",
     "linkinator.config.json",
+    "package-lock.json.1870439999",
     "protos/google/cloud/phishingprotection/v1beta1/phishingprotection.proto",
     "protos/protos.d.ts",
     "protos/protos.js",
     "protos/protos.json",
     "renovate.json",
     "samples/README.md",
+    "samples/package-lock.json.3890274010",
     "src/index.ts",
     "src/v1beta1/index.ts",
     "src/v1beta1/phishing_protection_service_v1_beta1_client.ts",
