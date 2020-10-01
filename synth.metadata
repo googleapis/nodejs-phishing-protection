@@ -4,15 +4,15 @@
       "git": {
         "name": ".",
         "remote": "git@github.com:googleapis/nodejs-phishing-protection.git",
-        "sha": "9d81a7722db3aa8e14c009c6e6420fac2a9a686a"
+        "sha": "bf36b0ea806022944de1f1c87d2b119b84b4f441"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "3dbeac0d54125b123c8dfd39c774b37473c36944",
-        "internalRef": "333159182"
+        "sha": "cb7fc620590382a4a2ea6ffdf6f51ae0e77bbbb5",
+        "internalRef": "334682521"
       }
     }
   ],
@@ -67,6 +67,7 @@
     ".kokoro/system-test.sh",
     ".kokoro/test.bat",
     ".kokoro/test.sh",
+    ".kokoro/trampoline.sh",
     ".kokoro/trampoline_v2.sh",
     ".mocharc.js",
     ".nycrc",
@@ -79,14 +80,12 @@
     "README.md",
     "api-extractor.json",
     "linkinator.config.json",
-    "package-lock.json.1870439999",
     "protos/google/cloud/phishingprotection/v1beta1/phishingprotection.proto",
     "protos/protos.d.ts",
     "protos/protos.js",
     "protos/protos.json",
     "renovate.json",
     "samples/README.md",
-    "samples/package-lock.json.3890274010",
     "src/index.ts",
     "src/v1beta1/index.ts",
     "src/v1beta1/phishing_protection_service_v1_beta1_client.ts",
