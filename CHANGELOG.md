@@ -4,6 +4,20 @@
 
 [1]: https://www.npmjs.com/package/@google-cloud/phishing-protection?activeTab=versions
 
+### [2.3.1](https://www.github.com/googleapis/nodejs-phishing-protection/compare/v2.3.0...v2.3.1) (2020-10-02)
+
+
+### Bug Fixes
+
+* **build:** pass AUTORELEASE_PR variable ([#205](https://www.github.com/googleapis/nodejs-phishing-protection/issues/205)) ([70e0401](https://www.github.com/googleapis/nodejs-phishing-protection/commit/70e0401f60fc820e2c728e57e58a36e7ec7d1295))
+
+## [2.3.0](https://www.github.com/googleapis/nodejs-phishing-protection/compare/v2.2.0...v2.3.0) (2020-10-01)
+
+
+### Features
+
+* **trampoline_v2:** generate trampoline v2 configuration ([#202](https://www.github.com/googleapis/nodejs-phishing-protection/issues/202)) ([10759cd](https://www.github.com/googleapis/nodejs-phishing-protection/commit/10759cd7ea01eefbc5e4b84cfb16efc5ce815a75))
+
 ## [2.2.0](https://www.github.com/googleapis/nodejs-phishing-protection/compare/v2.1.1...v2.2.0) (2020-08-31)
 
 

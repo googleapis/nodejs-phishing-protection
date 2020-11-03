@@ -14,7 +14,7 @@ branchProtectionRules:
     - 'ci / Summary Check for ci/kokoro: System test (pull_request)'
     - 'cla/google'
   requiredApprovingReviewCount: 1
-  requiresCodeOwnerReviews: false
+  requiresCodeOwnerReviews: true
   requiresStrictStatusChecks: true
 permissionRules:
   - team: yoshi
