@@ -5,14 +5,13 @@ branchProtectionRules:
 - pattern: master
   isAdminEnforced: true
   requiredStatusCheckContexts:
-    - 'test (10)'
-    - 'test (12)'
-    - 'test (13)'
-    - 'windows'
-    - 'lint'
-    - 'docs'
-    - 'Summary Check for ci/kokoro: Samples test'
-    - 'Summary Check for ci/kokoro: System test'
+    - 'ci / test (10) (pull_request)'
+    - 'ci / test (12) (pull_request)'
+    - 'ci / windows (pull_request) '
+    - 'ci / lint (pull_request) '
+    - 'ci / docs (pull_request)'
+    - 'ci / Summary Check for ci/kokoro: Samples test (pull_request)'
+    - 'ci / Summary Check for ci/kokoro: System test (pull_request)'
     - 'cla/google'
   requiredApprovingReviewCount: 1
   requiresCodeOwnerReviews: true
