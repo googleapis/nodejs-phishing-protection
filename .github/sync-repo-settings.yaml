@@ -5,11 +5,11 @@ branchProtectionRules:
 - pattern: master
   isAdminEnforced: true
   requiredStatusCheckContexts:
-    - 'ci / test (10) (pull_request)'
-    - 'ci / test (12) (pull_request)'
-    - 'ci / windows (pull_request) '
-    - 'ci / lint (pull_request) '
-    - 'ci / docs (pull_request)'
+    - 'ci / test (10)'
+    - 'ci / test (12)'
+    - 'ci / windows'
+    - 'ci / lint'
+    - 'ci / docs'
     - 'ci / Summary Check for ci/kokoro: Samples test (pull_request)'
     - 'ci / Summary Check for ci/kokoro: System test (pull_request)'
     - 'cla/google'
