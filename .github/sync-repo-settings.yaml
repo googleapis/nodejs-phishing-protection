@@ -12,8 +12,8 @@ branchProtectionRules:
     - 'windows'
     - 'lint'
     - 'docs'
-    - 'ci / Summary Check for ci/kokoro: Samples test'
-    - 'ci / Summary Check for ci/kokoro: System test'
+    - 'Summary Check for ci/kokoro: Samples test'
+    - 'Summary Check for ci/kokoro: System test'
     - 'cla/google'
   requiredApprovingReviewCount: 1
   requiresCodeOwnerReviews: true
