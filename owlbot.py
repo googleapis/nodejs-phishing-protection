@@ -20,6 +20,7 @@ import logging
 
 logging.basicConfig(level=logging.DEBUG)
 
+# TODO: figure out a way to populate this dynamically:
 versions = ['v1beta1']
 
 # Copy common templates
