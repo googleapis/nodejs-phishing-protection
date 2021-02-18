@@ -1,0 +1,5 @@
+docker:
+  image: gcr.io/repo-automation-bots/owlbot-nodejs:latest
+copy-dirs:
+  source: /google/cloud/phishingprotection/v1beta1/phishingprotection-v1beta1-nodejs/src/v1beta1
+  dest: /src/v1beta1
