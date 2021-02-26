@@ -8,7 +8,6 @@ branchProtectionRules:
     - 'test (10)'
     - 'test (12)'
     - 'test (14)'
-    - 'test (15)'
     - 'windows'
     - 'lint'
     - 'docs'
