@@ -90,11 +90,15 @@ export class PhishingProtectionServiceV1Beta1Client {
    */
   constructor(opts?: ClientOptions) {
     // Ensure that options include all the required fields.
-    const staticMembers = this.constructor as typeof PhishingProtectionServiceV1Beta1Client;
-    const servicePath = opts?.servicePath || opts?.apiEndpoint || staticMembers.servicePath;
+    const staticMembers = this
+      .constructor as typeof PhishingProtectionServiceV1Beta1Client;
+    const servicePath =
+      opts?.servicePath || opts?.apiEndpoint || staticMembers.servicePath;
     const port = opts?.port || staticMembers.port;
     const clientConfig = opts?.clientConfig ?? {};
-    const fallback = opts?.fallback ?? (typeof window !== 'undefined' && typeof window?.fetch === 'function');
+    const fallback =
+      opts?.fallback ??
+      (typeof window !== 'undefined' && typeof window?.fetch === 'function');
     opts = Object.assign({servicePath, port, clientConfig, fallback}, opts);
 
     // If scopes are unset in options and we're connecting to a non-default endpoint, set scopes just in case.
@@ -112,7 +116,7 @@ export class PhishingProtectionServiceV1Beta1Client {
     this._opts = opts;
 
     // Save the auth object to the client, for use by other methods.
-    this.auth = (this._gaxGrpc.auth as gax.GoogleAuth);
+    this.auth = this._gaxGrpc.auth as gax.GoogleAuth;
 
     // Set the default scopes in auth client if needed.
     if (servicePath === staticMembers.servicePath) {
@@ -120,10 +124,7 @@ export class PhishingProtectionServiceV1Beta1Client {
     }
 
     // Determine the client header string.
-    const clientHeader = [
-      `gax/${this._gaxModule.version}`,
-      `gapic/${version}`,
-    ];
+    const clientHeader = [`gax/${this._gaxModule.version}`, `gapic/${version}`];
     if (typeof process !== 'undefined' && 'versions' in process) {
       clientHeader.push(`gl-node/${process.versions.node}`);
     } else {
@@ -139,12 +140,18 @@ export class PhishingProtectionServiceV1Beta1Client {
     // For Node.js, pass the path to JSON proto file.
     // For browsers, pass the JSON content.
 
-    const nodejsProtoPath = path.join(__dirname, '..', '..', 'protos', 'protos.json');
+    const nodejsProtoPath = path.join(
+      __dirname,
+      '..',
+      '..',
+      'protos',
+      'protos.json'
+    );
     this._protos = this._gaxGrpc.loadProto(
-      opts.fallback ?
-        // eslint-disable-next-line @typescript-eslint/no-var-requires
-        require("../../protos/protos.json") :
-        nodejsProtoPath
+      opts.fallback
+        ? // eslint-disable-next-line @typescript-eslint/no-var-requires
+          require('../../protos/protos.json')
+        : nodejsProtoPath
     );
 
     // This API contains "path templates"; forward-slash-separated
@@ -158,8 +165,11 @@ export class PhishingProtectionServiceV1Beta1Client {
 
     // Put together the default options sent with requests.
     this._defaults = this._gaxGrpc.constructSettings(
-        'google.cloud.phishingprotection.v1beta1.PhishingProtectionServiceV1Beta1', gapicConfig as gax.ClientConfig,
-        opts.clientConfig || {}, {'x-goog-api-client': clientHeader.join(' ')});
+      'google.cloud.phishingprotection.v1beta1.PhishingProtectionServiceV1Beta1',
+      gapicConfig as gax.ClientConfig,
+      opts.clientConfig || {},
+      {'x-goog-api-client': clientHeader.join(' ')}
+    );
 
     // Set up a dictionary of "inner API calls"; the core implementation
     // of calling the API is handled in `google-gax`, with this code
@@ -187,16 +197,19 @@ export class PhishingProtectionServiceV1Beta1Client {
     // Put together the "service stub" for
     // google.cloud.phishingprotection.v1beta1.PhishingProtectionServiceV1Beta1.
     this.phishingProtectionServiceV1Beta1Stub = this._gaxGrpc.createStub(
-        this._opts.fallback ?
-          (this._protos as protobuf.Root).lookupService('google.cloud.phishingprotection.v1beta1.PhishingProtectionServiceV1Beta1') :
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          (this._protos as any).google.cloud.phishingprotection.v1beta1.PhishingProtectionServiceV1Beta1,
-        this._opts) as Promise<{[method: string]: Function}>;
+      this._opts.fallback
+        ? (this._protos as protobuf.Root).lookupService(
+            'google.cloud.phishingprotection.v1beta1.PhishingProtectionServiceV1Beta1'
+          )
+        : // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          (this._protos as any).google.cloud.phishingprotection.v1beta1
+            .PhishingProtectionServiceV1Beta1,
+      this._opts
+    ) as Promise<{[method: string]: Function}>;
 
     // Iterate over each of the methods that the service provides
     // and create an API call method for each.
-    const phishingProtectionServiceV1Beta1StubMethods =
-        ['reportPhishing'];
+    const phishingProtectionServiceV1Beta1StubMethods = ['reportPhishing'];
     for (const methodName of phishingProtectionServiceV1Beta1StubMethods) {
       const callPromise = this.phishingProtectionServiceV1Beta1Stub.then(
         stub => (...args: Array<{}>) => {
@@ -206,12 +219,12 @@ export class PhishingProtectionServiceV1Beta1Client {
           const func = stub[methodName];
           return func.apply(stub, args);
         },
-        (err: Error|null|undefined) => () => {
+        (err: Error | null | undefined) => () => {
           throw err;
-        });
+        }
+      );
 
-      const descriptor =
-        undefined;
+      const descriptor = undefined;
       const apiCall = this._gaxModule.createApiCall(
         callPromise,
         this._defaults[methodName],
@@ -255,9 +268,7 @@ export class PhishingProtectionServiceV1Beta1Client {
    * @returns {string[]} List of default scopes.
    */
   static get scopes() {
-    return [
-      'https://www.googleapis.com/auth/cloud-platform'
-    ];
+    return ['https://www.googleapis.com/auth/cloud-platform'];
   }
 
   getProjectId(): Promise<string>;
@@ -266,8 +277,9 @@ export class PhishingProtectionServiceV1Beta1Client {
    * Return the project ID used by this class.
    * @returns {Promise} A promise that resolves to string containing the project ID.
    */
-  getProjectId(callback?: Callback<string, undefined, undefined>):
-      Promise<string>|void {
+  getProjectId(
+    callback?: Callback<string, undefined, undefined>
+  ): Promise<string> | void {
     if (callback) {
       this.auth.getProjectId(callback);
       return;
@@ -279,72 +291,99 @@ export class PhishingProtectionServiceV1Beta1Client {
   // -- Service calls --
   // -------------------
   reportPhishing(
-      request: protos.google.cloud.phishingprotection.v1beta1.IReportPhishingRequest,
-      options?: CallOptions):
-      Promise<[
-        protos.google.cloud.phishingprotection.v1beta1.IReportPhishingResponse,
-        protos.google.cloud.phishingprotection.v1beta1.IReportPhishingRequest|undefined, {}|undefined
-      ]>;
+    request: protos.google.cloud.phishingprotection.v1beta1.IReportPhishingRequest,
+    options?: CallOptions
+  ): Promise<
+    [
+      protos.google.cloud.phishingprotection.v1beta1.IReportPhishingResponse,
+      (
+        | protos.google.cloud.phishingprotection.v1beta1.IReportPhishingRequest
+        | undefined
+      ),
+      {} | undefined
+    ]
+  >;
   reportPhishing(
-      request: protos.google.cloud.phishingprotection.v1beta1.IReportPhishingRequest,
-      options: CallOptions,
-      callback: Callback<
-          protos.google.cloud.phishingprotection.v1beta1.IReportPhishingResponse,
-          protos.google.cloud.phishingprotection.v1beta1.IReportPhishingRequest|null|undefined,
-          {}|null|undefined>): void;
+    request: protos.google.cloud.phishingprotection.v1beta1.IReportPhishingRequest,
+    options: CallOptions,
+    callback: Callback<
+      protos.google.cloud.phishingprotection.v1beta1.IReportPhishingResponse,
+      | protos.google.cloud.phishingprotection.v1beta1.IReportPhishingRequest
+      | null
+      | undefined,
+      {} | null | undefined
+    >
+  ): void;
   reportPhishing(
-      request: protos.google.cloud.phishingprotection.v1beta1.IReportPhishingRequest,
-      callback: Callback<
-          protos.google.cloud.phishingprotection.v1beta1.IReportPhishingResponse,
-          protos.google.cloud.phishingprotection.v1beta1.IReportPhishingRequest|null|undefined,
-          {}|null|undefined>): void;
-/**
- * Reports a URI suspected of containing phishing content to be reviewed. Once
- * the report review is complete, its result can be found in the Cloud
- * Security Command Center findings dashboard for Phishing Protection. If the
- * result verifies the existence of malicious phishing content, the site will
- * be added the to [Google's Social Engineering
- * lists](https://support.google.com/webmasters/answer/6350487/) in order to
- * protect users that could get exposed to this threat in the future.
- *
- * @param {Object} request
- *   The request object that will be sent.
- * @param {string} request.parent
- *   Required. The name of the project for which the report will be created,
- *   in the format "projects/{project_number}".
- * @param {string} request.uri
- *   Required. The URI that is being reported for phishing content to be analyzed.
- * @param {object} [options]
- *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
- * @returns {Promise} - The promise which resolves to an array.
- *   The first element of the array is an object representing [ReportPhishingResponse]{@link google.cloud.phishingprotection.v1beta1.ReportPhishingResponse}.
- *   Please see the
- *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
- *   for more details and examples.
- * @example
- * const [response] = await client.reportPhishing(request);
- */
+    request: protos.google.cloud.phishingprotection.v1beta1.IReportPhishingRequest,
+    callback: Callback<
+      protos.google.cloud.phishingprotection.v1beta1.IReportPhishingResponse,
+      | protos.google.cloud.phishingprotection.v1beta1.IReportPhishingRequest
+      | null
+      | undefined,
+      {} | null | undefined
+    >
+  ): void;
+  /**
+   * Reports a URI suspected of containing phishing content to be reviewed. Once
+   * the report review is complete, its result can be found in the Cloud
+   * Security Command Center findings dashboard for Phishing Protection. If the
+   * result verifies the existence of malicious phishing content, the site will
+   * be added the to [Google's Social Engineering
+   * lists](https://support.google.com/webmasters/answer/6350487/) in order to
+   * protect users that could get exposed to this threat in the future.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.parent
+   *   Required. The name of the project for which the report will be created,
+   *   in the format "projects/{project_number}".
+   * @param {string} request.uri
+   *   Required. The URI that is being reported for phishing content to be analyzed.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is an object representing [ReportPhishingResponse]{@link google.cloud.phishingprotection.v1beta1.ReportPhishingResponse}.
+   *   Please see the
+   *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
+   *   for more details and examples.
+   * @example
+   * const [response] = await client.reportPhishing(request);
+   */
   reportPhishing(
-      request: protos.google.cloud.phishingprotection.v1beta1.IReportPhishingRequest,
-      optionsOrCallback?: CallOptions|Callback<
+    request: protos.google.cloud.phishingprotection.v1beta1.IReportPhishingRequest,
+    optionsOrCallback?:
+      | CallOptions
+      | Callback<
           protos.google.cloud.phishingprotection.v1beta1.IReportPhishingResponse,
-          protos.google.cloud.phishingprotection.v1beta1.IReportPhishingRequest|null|undefined,
-          {}|null|undefined>,
-      callback?: Callback<
-          protos.google.cloud.phishingprotection.v1beta1.IReportPhishingResponse,
-          protos.google.cloud.phishingprotection.v1beta1.IReportPhishingRequest|null|undefined,
-          {}|null|undefined>):
-      Promise<[
-        protos.google.cloud.phishingprotection.v1beta1.IReportPhishingResponse,
-        protos.google.cloud.phishingprotection.v1beta1.IReportPhishingRequest|undefined, {}|undefined
-      ]>|void {
+          | protos.google.cloud.phishingprotection.v1beta1.IReportPhishingRequest
+          | null
+          | undefined,
+          {} | null | undefined
+        >,
+    callback?: Callback<
+      protos.google.cloud.phishingprotection.v1beta1.IReportPhishingResponse,
+      | protos.google.cloud.phishingprotection.v1beta1.IReportPhishingRequest
+      | null
+      | undefined,
+      {} | null | undefined
+    >
+  ): Promise<
+    [
+      protos.google.cloud.phishingprotection.v1beta1.IReportPhishingResponse,
+      (
+        | protos.google.cloud.phishingprotection.v1beta1.IReportPhishingRequest
+        | undefined
+      ),
+      {} | undefined
+    ]
+  > | void {
     request = request || {};
     let options: CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
-    }
-    else {
+    } else {
       options = optionsOrCallback as CallOptions;
     }
     options = options || {};
@@ -353,7 +392,7 @@ export class PhishingProtectionServiceV1Beta1Client {
     options.otherArgs.headers[
       'x-goog-request-params'
     ] = gax.routingHeader.fromParams({
-      'parent': request.parent || '',
+      parent: request.parent || '',
     });
     this.initialize();
     return this.innerApiCalls.reportPhishing(request, options, callback);
@@ -369,7 +408,7 @@ export class PhishingProtectionServiceV1Beta1Client {
    * @param {string} project
    * @returns {string} Resource name string.
    */
-  projectPath(project:string) {
+  projectPath(project: string) {
     return this.pathTemplates.projectPathTemplate.render({
       project: project,
     });
