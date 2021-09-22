@@ -352,6 +352,10 @@ export class PhishingProtectionServiceV1Beta1Client {
    *   for more details and examples.
    * @example
    * const [response] = await client.reportPhishing(request);
+   *
+   * @example <caption>include:samples/generated/v1beta1/phishing_protection_service_v1_beta1.report_phishing.js</caption>
+   * region_tag:phishingprotection_report_phishing_sample
+   *
    */
   reportPhishing(
     request?: protos.google.cloud.phishingprotection.v1beta1.IReportPhishingRequest,
