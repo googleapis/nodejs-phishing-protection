@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
 function main(parent, uri) {
@@ -31,7 +30,8 @@ function main(parent, uri) {
   // const uri = 'abc123'
 
   // Imports the Phishingprotection library
-  const {PhishingProtectionServiceV1Beta1Client} = require('@google-cloud/phishing-protection').v1beta1;
+  const {PhishingProtectionServiceV1Beta1Client} =
+    require('@google-cloud/phishing-protection').v1beta1;
 
   // Instantiates a client
   const phishingprotectionClient = new PhishingProtectionServiceV1Beta1Client();
