@@ -1,2 +1,3 @@
 releaseType: node
 primaryBranch: main
+handleGHRelease: true
