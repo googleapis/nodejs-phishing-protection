@@ -15,7 +15,6 @@
 'use strict';
 
 const path = require('path');
-const {assert} = require('chai');
 const {describe, it} = require('mocha');
 const cp = require('child_process');
 
@@ -29,7 +28,7 @@ const URI = 'http://example.com';
 describe('Quickstart', () => {
   it('should run quickstart', async () => {
     try {
-      stdout = execSync(`node ./quickstart.js ${URI} ${PROJECT_ID}`, {cwd});
+      execSync(`node ./quickstart.js ${URI} ${PROJECT_ID}`, {cwd});
     } catch (err) {
       if (err.toString().match(/This submission was recently received/)) {
         return;
